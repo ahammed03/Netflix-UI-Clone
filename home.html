@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETFLIX | HOME</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="custom.css">
+</head>
+
+<body class="bg-black text-white">
+    <div class="w-screen h-[90vh] relative mb-3">
+        <div class="navBar flex w-screen justify-evenly py-3">
+            <h1 class="text-4xl font-bold text-red-600">NETFLIX</h1>
+            <ul class="flex gap-4 items-end">
+                <li><a href="#" class="text-[rgba(255,255,255,0.7)] hover:text-white ">Home</a></li>
+                <li><a href="#" class="text-[rgba(255,255,255,0.7)] hover:text-white ">TV Shows</a></li>
+                <li><a href="#" class="text-[rgba(255,255,255,0.7)] hover:text-white ">Movies</a></li>
+                <li><a href="#" class="text-[rgba(255,255,255,0.7)] hover:text-white ">New & Popular</a></li>
+                <li><a href="#" class="text-[rgba(255,255,255,0.7)] hover:text-white ">MyList</a></li>
+                <li><a href="#" class="text-[rgba(255,255,255,0.7)] hover:text-white ">Browse by Languages</a></li>
+            </ul>
+            <div class="flex items-end gap-2">
+                <input class="w-0 transition-all duration-300 text-black" type="text" name=""
+                    placeholder="Titles,people,genres" id="searchInput">
+                <button class="text-red-600" onclick="expandInput()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-search">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.3-4.3" />
+                    </svg>
+                </button>
+            </div>
+            <div class="">
+                <img class="w-10 h-10 hover:border-2 rounded-md" src="./Images/p0.png" alt="">
+            </div>
+        </div>
+        <video id="mainVideo" class="w-screen h-[90vh] absolute top-0 left-0 -z-10" autoplay
+            src="./videos/Salaar _ Official Trailer _ Prabhas _ Prithviraj _ Shruti Haasan _ 20th Jan _ Netflix India.mp4"></video>
+        <div class="absolute top-3/4 left-32 flex gap-4">
+            <button type="button" class="bg-[rgba(255,255,255,0.8)] text-black font-semibold rounded-sm px-4 py-2"><a
+                    href="player.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="lucide lucide-play">
+                        <polygon points="5 3 19 12 5 21 5 3" />
+                    </svg></a></button>
+            <button type="button" class=" bg-[rgba(255,255,255,0.8)] font-semibold rounded-sm px-5 py-1 text-black">More
+                Info</button>
+        </div>
+        <button type="button" class="absolute top-3/4 right-1/4" onclick="muteAudio()" id="muteButton">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="lucide lucide-volume-2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+            </svg>
+        </button>
+
+    </div>
+    <label class="px-7 text-xl" for="popularOnNetflix">Popular on Netflix</label>
+    <div class="flex overflow-x-auto px-7 my-3 gap-3" id="popularOnNetflix">
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1488861859915-4b5a5e57649f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW92aWUlMjBwb3N0ZXIlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://media.istockphoto.com/id/1167770705/photo/young-indian-man-wearing-orange-sweater-over-isolated-white-background-approving-doing.webp?b=1&s=170667a&w=0&k=20&c=Qm92okavAxSUfDCrPWc5GyFFgwRSHk90x9yP5E4JMdc="
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1467307983825-619715426c70?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://media.istockphoto.com/id/1872414665/photo/side-view-of-businessman-walking-in-modern-hallway-interior-with-columns-blank-white-mock-up.webp?b=1&s=170667a&w=0&k=20&c=KpyrteNvbEp10V7S4CyYEslp0PhkFuCiQlhTJ7lpXbI="
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW92aWUlMjBwb3N0ZXIlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://media.istockphoto.com/id/1167770705/photo/young-indian-man-wearing-orange-sweater-over-isolated-white-background-approving-doing.webp?b=1&s=170667a&w=0&k=20&c=Qm92okavAxSUfDCrPWc5GyFFgwRSHk90x9yP5E4JMdc="
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1467307983825-619715426c70?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://media.istockphoto.com/id/1872414665/photo/side-view-of-businessman-walking-in-modern-hallway-interior-with-columns-blank-white-mock-up.webp?b=1&s=170667a&w=0&k=20&c=KpyrteNvbEp10V7S4CyYEslp0PhkFuCiQlhTJ7lpXbI="
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+
+    </div>
+    <label class="px-7 text-xl" for="continueWatching">Continue Watching</label>
+    <div class="flex overflow-x-auto px-7 my-3 gap-3" id="continueWatching">
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1488861859915-4b5a5e57649f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1506461883276-594a12b11cf3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1488861859915-4b5a5e57649f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW92aWUlMjBwb3N0ZXIlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://media.istockphoto.com/id/1167770705/photo/young-indian-man-wearing-orange-sweater-over-isolated-white-background-approving-doing.webp?b=1&s=170667a&w=0&k=20&c=Qm92okavAxSUfDCrPWc5GyFFgwRSHk90x9yP5E4JMdc="
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1467307983825-619715426c70?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://media.istockphoto.com/id/1872414665/photo/side-view-of-businessman-walking-in-modern-hallway-interior-with-columns-blank-white-mock-up.webp?b=1&s=170667a&w=0&k=20&c=KpyrteNvbEp10V7S4CyYEslp0PhkFuCiQlhTJ7lpXbI="
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+
+
+    </div>
+
+    <label class="px-7 text-xl" for="newReleases">New Releases</label>
+    <div class="flex overflow-x-auto px-7 my-3 gap-3" id="newReleases">
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW92aWUlMjBwb3N0ZXIlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://media.istockphoto.com/id/1167770705/photo/young-indian-man-wearing-orange-sweater-over-isolated-white-background-approving-doing.webp?b=1&s=170667a&w=0&k=20&c=Qm92okavAxSUfDCrPWc5GyFFgwRSHk90x9yP5E4JMdc="
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW92aWUlMjBwb3N0ZXIlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://media.istockphoto.com/id/1167770705/photo/young-indian-man-wearing-orange-sweater-over-isolated-white-background-approving-doing.webp?b=1&s=170667a&w=0&k=20&c=Qm92okavAxSUfDCrPWc5GyFFgwRSHk90x9yP5E4JMdc="
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1467307983825-619715426c70?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://media.istockphoto.com/id/1872414665/photo/side-view-of-businessman-walking-in-modern-hallway-interior-with-columns-blank-white-mock-up.webp?b=1&s=170667a&w=0&k=20&c=KpyrteNvbEp10V7S4CyYEslp0PhkFuCiQlhTJ7lpXbI="
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+
+    </div>
+    <label class="px-7 text-xl" for="hindiLanguage">Hindi Language</label>
+    <div class="flex overflow-x-auto px-7 my-3 gap-3" id="hindiLanguage">
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44  hover:border-2"
+                src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW92aWUlMjBwb3N0ZXIlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW92aWUlMjBwb3N0ZXIlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://media.istockphoto.com/id/1167770705/photo/young-indian-man-wearing-orange-sweater-over-isolated-white-background-approving-doing.webp?b=1&s=170667a&w=0&k=20&c=Qm92okavAxSUfDCrPWc5GyFFgwRSHk90x9yP5E4JMdc="
+                alt=""></a>
+
+    </div>
+    <label class="px-7 text-xl" for="southBlockbusters">South Blockbusters</label>
+    <div class="flex overflow-x-auto px-7 my-3 gap-3" id="southBlockbusters">
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1467307983825-619715426c70?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW92aWUlMjBwb3N0ZXIlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://media.istockphoto.com/id/1167770705/photo/young-indian-man-wearing-orange-sweater-over-isolated-white-background-approving-doing.webp?b=1&s=170667a&w=0&k=20&c=Qm92okavAxSUfDCrPWc5GyFFgwRSHk90x9yP5E4JMdc="
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW92aWUlMjBwb3N0ZXIlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://media.istockphoto.com/id/1167770705/photo/young-indian-man-wearing-orange-sweater-over-isolated-white-background-approving-doing.webp?b=1&s=170667a&w=0&k=20&c=Qm92okavAxSUfDCrPWc5GyFFgwRSHk90x9yP5E4JMdc="
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1467307983825-619715426c70?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+    </div>
+    <label class="px-7 text-xl" for="anime">Anime</label>
+    <div class="flex overflow-x-auto px-7 my-3 gap-3" id="anime">
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://media.istockphoto.com/id/1872414665/photo/side-view-of-businessman-walking-in-modern-hallway-interior-with-columns-blank-white-mock-up.webp?b=1&s=170667a&w=0&k=20&c=KpyrteNvbEp10V7S4CyYEslp0PhkFuCiQlhTJ7lpXbI="
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW92aWUlMjBwb3N0ZXIlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://media.istockphoto.com/id/1167770705/photo/young-indian-man-wearing-orange-sweater-over-isolated-white-background-approving-doing.webp?b=1&s=170667a&w=0&k=20&c=Qm92okavAxSUfDCrPWc5GyFFgwRSHk90x9yP5E4JMdc="
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1519955266818-0231b63402bc?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1532375810709-75b1da00537c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bW92aWUlMjBwb3N0ZXIlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://media.istockphoto.com/id/1167770705/photo/young-indian-man-wearing-orange-sweater-over-isolated-white-background-approving-doing.webp?b=1&s=170667a&w=0&k=20&c=Qm92okavAxSUfDCrPWc5GyFFgwRSHk90x9yP5E4JMdc="
+                alt=""></a>
+
+    </div>
+    <label class="px-7 text-xl" for="comedy">Comedy</label>
+    <div class="flex overflow-x-auto px-7 my-3 gap-3" id="comedy">
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://media.istockphoto.com/id/1167770705/photo/young-indian-man-wearing-orange-sweater-over-isolated-white-background-approving-doing.webp?b=1&s=170667a&w=0&k=20&c=Qm92okavAxSUfDCrPWc5GyFFgwRSHk90x9yP5E4JMdc="
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+
+    </div>
+    <label class="px-7 text-xl" for="feelGoodMovies">Feel-good Movies</label>
+    <div class="flex overflow-x-auto px-7 my-3 gap-3" id="feelGoodMovies">
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+    </div>
+    <label class="px-7 text-xl" for="indianDrama">Indian Drama</label>
+    <div class="flex overflow-x-auto px-7 my-3 gap-3" id="indianDrama">
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://media.istockphoto.com/id/1167770705/photo/young-indian-man-wearing-orange-sweater-over-isolated-white-background-approving-doing.webp?b=1&s=170667a&w=0&k=20&c=Qm92okavAxSUfDCrPWc5GyFFgwRSHk90x9yP5E4JMdc="
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1455157823797-3019317cbcf0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fG1vdmllJTIwcG9zdGVyJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D"
+                alt=""></a>
+
+    </div>
+    <label class="px-7 text-xl" for="sciFiTv">Sci-Fi TV</label>
+    <div class="flex overflow-x-auto px-7 my-3 gap-3" id="sciFiTv">
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+        <a href="#" class=""><img class="bg-red-600 rounded-sm max-h-28 max-w-44"
+                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""></a>
+    </div>
+
+
+
+    <div class="h-[60vh] w-screen flex justify-evenly py-[15vh] bg-black text-[rgba(255,255,255,0.7)] text-xs">
+        <ul class="flex flex-col gap-2">
+            <p class="">Questions? Call <a class="underline" href="#">000-800-100-8343</a></p>
+            <li><a class="underline" href="#">FAQ</a></li>
+            <li><a class="underline" href="#">Investor Relations</a></li>
+            <li><a class="underline" href="#">Privacy</a></li>
+            <li><a class="underline" href="#">Speed Test</a></li>
+            <li><select name="language" id="" class="bg-black border-2 rounded-sm ">
+                    <option value="Eng">English</option>
+                    <option value="Hin">Hindi</option>
+                </select>
+            </li>
+            <li>Netflix India</li>
+        </ul>
+        <ul class="flex flex-col gap-2">
+            <li><a class="underline" href="#">Help Center</a></li>
+            <li><a class="underline" href="#">jobs</a></li>
+            <li><a class="underline" href="#">Cookie Preference</a></li>
+            <li><a class="underline" href="#">Legal Notices</a></li>
+        </ul>
+        <ul class="flex flex-col gap-2">
+            <li><a class="underline" href="#">Account</a></li>
+            <li><a class="underline" href="#">Ways to Watch</a></li>
+            <li><a class="underline" href="#">Corporate Information</a></li>
+            <li><a class="underline" href="#">Only on Netflix</a></li>
+        </ul>
+        <ul class="flex flex-col gap-2">
+            <li><a class="underline" href="#">Media Center</a></li>
+            <li><a class="underline" href="#">Terms of Use</a></li>
+            <li><a class="underline" href="#">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
